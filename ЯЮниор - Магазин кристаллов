@@ -21,15 +21,8 @@ namespace HomeWork
             int crystalsInWallet = 0;
             Console.WriteLine($"Стоимость 1 кристалла = {crystalPrice}. Сколько кристаллов хотите купить?");
             int howManyCrystalToBuy = int.Parse(Console.ReadLine());
-            if (howManyCrystalToBuy * crystalPrice > initialGold)
-            {
-                Console.WriteLine("У вас не хватает золота для покупки такого количества кристаллов.");
-            }
-            else
-            {
-                crystalsInWallet = howManyCrystalToBuy;
-                goldInWallet = initialGold - (crystalPrice * howManyCrystalToBuy);
-            }
+            crystalsInWallet = howManyCrystalToBuy;
+            goldInWallet = initialGold - (crystalPrice * howManyCrystalToBuy);
             Console.WriteLine($"У вас на счету {goldInWallet} золота и {crystalsInWallet} кристаллов.");
         }
     }
