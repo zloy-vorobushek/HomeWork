@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            int totalImages = 52;
+            int outputOfImages = 3;
+            int thereWillBeFilledRows = totalImages / outputOfImages;
+            Console.WriteLine(thereWillBeFilledRows);
+        }
+    }
+}
