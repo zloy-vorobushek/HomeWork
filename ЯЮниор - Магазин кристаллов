@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите начальное количество золота.");
+            int initialGold = int.Parse(Console.ReadLine()); // В начале золота
+            int crystalPrice = 10; // Цена кристалла
+            int goldInWallet = initialGold;
+            int crystalsInWallet = 0;
+            Console.WriteLine($"Стоимость 1 кристалла = {crystalPrice}. Сколько кристаллов хотите купить?");
+            int howManyCrystalToBuy = int.Parse(Console.ReadLine());
+            if (howManyCrystalToBuy * crystalPrice > initialGold)
+            {
+                Console.WriteLine("У вас не хватает золота для покупки такого количества кристаллов.");
+            }
+            else
+            {
+                crystalsInWallet = howManyCrystalToBuy;
+                goldInWallet = initialGold - (crystalPrice * howManyCrystalToBuy);
+            }
+            Console.WriteLine($"У вас на счету {goldInWallet} золота и {crystalsInWallet} кристаллов.");
+        }
+    }
+}
