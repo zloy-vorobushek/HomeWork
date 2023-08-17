@@ -14,11 +14,9 @@ namespace HomeWork
     {
         static void Main()
         {
-            string name = "Oleg";
-            string surname = "Kifenko";
-            string correctName = surname;
-            string correctSurname = name;
-            Console.WriteLine(name + " " + surname);
+            string name = "Kifenko";
+            string surname = "Oleg";
+            Console.WriteLine($"{surname} {name}");
         }
     }
 }
