@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            string input1 = Console.ReadLine();
+            while (input1 != "exit")
+            {
+                input1 = Console.ReadLine();
+                Console.WriteLine("Вы написали " + input1);
+            }
+        }
+    }
+}
