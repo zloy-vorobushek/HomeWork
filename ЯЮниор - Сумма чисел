@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            Random rand = new Random();
+            int number = int.Parse(Console.ReadLine());
+            int value;
+            int amount = 0;
+            do
+            {
+                value = rand.Next(-100, 100);
+                if (value <= number && value >= 0)
+                {
+                    if (value % 3 == 0 || value % 5 == 0)
+                    {
+                        amount += value;
+                    }
+                }
+            } while (value != number);
+            Console.WriteLine(amount);
+        }
+    }
+}
