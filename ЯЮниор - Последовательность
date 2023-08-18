@@ -1,0 +1,23 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            for (int i = 5; i <= 96; i+=7)
+            {
+                Console.Write(i + " ");
+            }            
+        }
+    }
+}
