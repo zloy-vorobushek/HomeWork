@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Media;
+using System.Security.Cryptography;
+using System.Text;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace HomeWork
+{
+    class Program
+    {
+        static void Main()
+        {
+            Console.WriteLine("Введите кол-во старушек.");
+            int queue = int.Parse(Console.ReadLine()); // Сколько человек в очереди
+            int receptionTime = 10; // Время приема одного человека
+            int justHours = (queue * receptionTime) / 60; // Всего часов ожидания
+            int justMinutes = (queue * receptionTime) - (justHours * 60); // Минут ожидания
+            Console.WriteLine($"Вы должны стоять в очереди {justHours} часа и {justMinutes} минут.");
+        }
+    }
+}
