@@ -1,12 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace HomeWork
 {
@@ -16,8 +8,9 @@ namespace HomeWork
         {
             int totalImages = 52;
             int outputOfImages = 3;
-            int thereWillBeFilledRows = totalImages / outputOfImages;
-            Console.WriteLine(thereWillBeFilledRows);
+            int filledRows = totalImages / outputOfImages;
+            int picturesBeyondMeasure = 52 - filledRows * outputOfImages;
+            Console.WriteLine($"{filledRows} полностью заполненных рядов и {picturesBeyondMeasure} картинок будетсверх меры.");
         }
     }
 }
