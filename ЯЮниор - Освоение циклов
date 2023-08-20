@@ -1,12 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace HomeWork
 {
@@ -15,10 +7,10 @@ namespace HomeWork
         static void Main()
         {
             Console.WriteLine("Введите количество повторений.");
-            int replay = int.Parse(Console.ReadLine());
-            for (int i = 0; i < replay; i++)
+            int replayMessageCount = int.Parse(Console.ReadLine());
+            for (int i = 0; i < replayMessageCount; i++)
             {
-            Console.WriteLine("Hello, World!");         
+                Console.WriteLine("Hello, World!");
             }
         }
     }
