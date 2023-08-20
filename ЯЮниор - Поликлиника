@@ -1,12 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Media;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace HomeWork
 {
@@ -16,10 +8,11 @@ namespace HomeWork
         {
             Console.WriteLine("Введите кол-во старушек.");
             int queue = int.Parse(Console.ReadLine());
+            int minutesPerHour = 60;
             int receptionTime = 10;
-            int justHours = (queue * receptionTime) / 60;
-            int justMinutes = (queue * receptionTime) - (justHours * 60);
-            Console.WriteLine($"Вы должны стоять в очереди {justHours} часа и {justMinutes} минут.");
+            int hours = (queue * receptionTime) / minutesPerHour;
+            int justMinutes = (queue * receptionTime) - (hours * 60);
+            Console.WriteLine($"Вы должны стоять в очереди {hours} часа и {justMinutes} минут.");
         }
     }
 }
