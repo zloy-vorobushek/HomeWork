@@ -1,0 +1,31 @@
+using System;
+
+namespace HomeWork
+{
+
+    class Program
+    {
+        static void Main()
+        {
+            string password = "qwe123";
+            string userInput;
+
+            Console.WriteLine("Введите пароль.");
+
+            for (int i = 1; i <= 3; i++)
+            {
+                userInput = Console.ReadLine();
+
+                if (userInput == password)
+                {
+                    Console.WriteLine("Пароль верный.\nЖи, ши - пиши от души.");
+                }
+                else
+                {
+                    Console.WriteLine($"Пароль не верный, осталось {3 - i} попыток.");
+                }
+            }
+
+        }
+    }
+}
