@@ -8,10 +8,12 @@ namespace HomeWork
         {
             Console.WriteLine("Введите количество повторений.");
             int replayMessageCount = int.Parse(Console.ReadLine());
+
             for (int i = 0; i < replayMessageCount; i++)
             {
                 Console.WriteLine("Hello, World!");
             }
+
         }
     }
 }
