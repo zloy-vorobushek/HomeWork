@@ -1,0 +1,52 @@
+using System;
+
+namespace HomeWork
+{
+
+    class Program
+
+    {
+        static void Main()
+
+        {
+            int totalSeats = 250;
+            int reserveSeats = 0;
+            int freeSeats = totalSeats;
+            string passengerName = null;
+            Console.WriteLine("На борту нашего корабля доступны следующие команды:\n" +
+                "1 - setName (Введите имя пассажира)\n2 - reserveSeats (Забронировать место)\n" +
+                "3 - ()\n4 - ()\n " +
+                "5 - passengerInformation (Информация о пассажире)\n6 - exit (Выйти из меню бронирования)");
+
+
+            string userInput = Console.ReadLine();
+            switch (userInput)
+            {
+                case "setName":
+                    passengerName = Console.ReadLine();
+                    Console.WriteLine($"Запрос обработан, присвоено имя {passengerName}");
+                    break;
+                case "reserveSeat":
+                    Console.WriteLine("Сколько мест вам необходимо?");
+                    reserveSeats = int.Parse(Console.ReadLine());
+                    freeSeats -= reserveSeats;
+                    break;
+                case "Команда 3":
+
+                    break;
+                case "Команда 4":
+
+                    break;
+                case "passengerInformation":
+                    Console.WriteLine($"Имя пассажира: {passengerName}\nЗабронировано мест пассажиром: {reserveSeats}" +
+                        $"");
+                    break;
+                case "exit":
+                    Console.WriteLine("До скорой встречи! =)");
+                    break;
+            }
+
+        }
+
+    }
+}
