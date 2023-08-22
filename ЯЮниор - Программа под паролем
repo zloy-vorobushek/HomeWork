@@ -10,9 +10,12 @@ namespace HomeWork
             string password = "qwe123";
             string userInput;
 
+            int inputAttempts = 3;
+            int remainingAttempts;
+
             Console.WriteLine("Введите пароль.");
 
-            for (int i = 1; i <= 3; i++)
+            for (int i = 1; i <= inputAttempts; i++)
             {
                 userInput = Console.ReadLine();
 
@@ -22,10 +25,10 @@ namespace HomeWork
                 }
                 else
                 {
-                    Console.WriteLine($"Пароль не верный, осталось {3 - i} попыток.");
+                    remainingAttempts = inputAttempts - i;
+                    Console.WriteLine($"Пароль не верный, осталось {remainingAttempts} попыток.");
                 }
             }
-
         }
     }
 }
