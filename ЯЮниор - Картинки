@@ -7,9 +7,9 @@ namespace HomeWork
         static void Main()
         {
             int totalImages = 52;
-            int outputOfImages = 3;
-            int filledRows = totalImages / outputOfImages;
-            int picturesBeyondMeasure = 52 - filledRows * outputOfImages;
+            int picturesRow = 3;
+            int filledRows = totalImages / picturesRow;
+            int picturesBeyondMeasure = totalImages % filledRows;
             Console.WriteLine($"{filledRows} полностью заполненных рядов и {picturesBeyondMeasure} картинок будетсверх меры.");
         }
     }
