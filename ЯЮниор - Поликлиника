@@ -11,7 +11,7 @@ namespace HomeWork
             int minutesPerHour = 60;
             int receptionTime = 10;
             int hours = (queue * receptionTime) / minutesPerHour;
-            int justMinutes = (queue * receptionTime) - (hours * 60);
+            int justMinutes = (queue * receptionTime) % (hours * minutesPerHour);
             Console.WriteLine($"Вы должны стоять в очереди {hours} часа и {justMinutes} минут.");
         }
     }
